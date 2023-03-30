@@ -26,3 +26,22 @@ Content-Type: application/json
 ### Check Out
 PUT http://localhost:8080/api/orders/3/check-out
 Content-Type: application/json
+
+### Set Bill
+PUT http://localhost:8080/api/orders/3/set-bill
+Content-Type: application/json
+
+[
+  {
+    "id": 2,
+    "price": 200000
+  },
+  {
+    "id": 5,
+    "price": 50000
+  },
+  {
+    "id": 6,
+    "price": 60000
+  }
+]
