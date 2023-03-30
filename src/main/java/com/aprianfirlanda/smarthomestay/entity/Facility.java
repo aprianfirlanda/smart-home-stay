@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -17,8 +19,11 @@ public class Facility {
 
     @Column(nullable = false)
     private String type;
-    // room, addtional
+    // room, additional
 
     @Column(nullable = false, unique = true)
     private String name;
+
+    @ManyToMany(mappedBy = "roles")
+    private List<Order> orders;
 }

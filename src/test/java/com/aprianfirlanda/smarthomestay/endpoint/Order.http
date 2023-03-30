@@ -1,0 +1,7 @@
+### Get List Room Facilities
+GET http://localhost:8080/api/orders/by-email
+Content-Type: application/json
+
+{
+  "email": "aprianfirlanda@gmail.com"
+}
