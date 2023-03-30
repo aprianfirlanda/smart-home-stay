@@ -1,4 +1,4 @@
-### Get List Room Facilities
+### Get Orders By Email
 GET http://localhost:8080/api/orders/by-email
 Content-Type: application/json
 
@@ -6,7 +6,7 @@ Content-Type: application/json
   "email": "aprianfirlanda@gmail.com"
 }
 
-### Get List Room Facilities
+### Create Order
 POST http://localhost:8080/api/orders
 Content-Type: application/json
 
@@ -19,10 +19,10 @@ Content-Type: application/json
   ]
 }
 
-### Get List Room Facilities
-PUT http://localhost:8080/api/orders/check-in/3
+### Check In
+PUT http://localhost:8080/api/orders/3/check-in
 Content-Type: application/json
 
-### Get List Room Facilities
-PUT http://localhost:8080/api/orders/check-out/3
+### Check Out
+PUT http://localhost:8080/api/orders/3/check-out
 Content-Type: application/json

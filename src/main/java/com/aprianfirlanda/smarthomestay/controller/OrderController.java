@@ -30,7 +30,7 @@ public class OrderController {
         return ResponseEntity.ok(response);
     }
 
-    @PutMapping("/check-in/{orderId}")
+    @PutMapping("/{orderId}/check-in")
     public ResponseEntity<ResponseDto.Base> checkIn(@PathVariable Long orderId) throws NotFoundError {
         orderService.checkIn(orderId);
 
@@ -41,7 +41,7 @@ public class OrderController {
         return ResponseEntity.ok(response);
     }
 
-    @PutMapping("/check-out/{orderId}")
+    @PutMapping("/{orderId}/check-out")
     public ResponseEntity<ResponseDto.Base> checkOut(@PathVariable Long orderId) throws NotFoundError {
         orderService.checkOut(orderId);
 
