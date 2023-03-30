@@ -19,6 +19,17 @@ public class OrderController {
         this.orderService = orderService;
     }
 
+    @PostMapping
+    public ResponseEntity<ResponseDto.Base> findFacilitiesByType(@RequestBody OrderDto.Create request) {
+        orderService.save(request);
+
+        ResponseDto.Base response = new ResponseDto.Base();
+        response.setStatus("Success");
+        response.setMessage("Successfully order");
+
+        return ResponseEntity.ok(response);
+    }
+
     @GetMapping("/by-email")
     public ResponseEntity<ResponseDto.WithData<List<Order>>> findFacilitiesByType(@RequestBody OrderDto.Find request) {
         ResponseDto.WithData<List<Order>> response = new ResponseDto.WithData<>();

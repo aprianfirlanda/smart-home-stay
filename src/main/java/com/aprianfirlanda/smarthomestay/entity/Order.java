@@ -33,7 +33,7 @@ public class Order {
             name = "orders_facilities",
             joinColumns = {@JoinColumn(name = "ORDER_ID", referencedColumnName = "ID")},
             inverseJoinColumns = {@JoinColumn(name = "FACILITY_ID", referencedColumnName = "ID")})
-    private List<Facility> roles = new ArrayList<>();
+    private List<Facility> facilities = new ArrayList<>();
 
     @Column
     private Long bill;

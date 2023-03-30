@@ -24,6 +24,6 @@ public class Facility {
     @Column(nullable = false, unique = true)
     private String name;
 
-    @ManyToMany(mappedBy = "roles")
+    @ManyToMany(mappedBy = "facilities")
     private List<Order> orders;
 }
