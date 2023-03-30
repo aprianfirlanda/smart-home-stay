@@ -18,3 +18,11 @@ Content-Type: application/json
     6
   ]
 }
+
+### Get List Room Facilities
+PUT http://localhost:8080/api/orders/check-in/3
+Content-Type: application/json
+
+### Get List Room Facilities
+PUT http://localhost:8080/api/orders/check-out/3
+Content-Type: application/json
