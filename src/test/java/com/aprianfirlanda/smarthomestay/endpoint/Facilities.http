@@ -1,0 +1,5 @@
+### Get List Room Facilities
+GET http://localhost:8080/api/facilities/room
+
+### Get List additional Facilities
+GET http://localhost:8080/api/facilities/additional
