@@ -12,4 +12,5 @@ public interface OrderService {
     Long save(OrderDto.Create request);
     void checkIn(Long id) throws NotFoundError;
     void checkOut(Long id) throws NotFoundError;
+    void setBill(Long id, List<OrderDto.SetBill> requests) throws NotFoundError;
 }

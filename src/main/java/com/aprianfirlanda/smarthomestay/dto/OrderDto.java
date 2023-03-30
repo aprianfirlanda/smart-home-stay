@@ -19,6 +19,14 @@ public class OrderDto {
     @Data
     @AllArgsConstructor
     @NoArgsConstructor
+    public static class SetBill {
+        private Long id;
+        private Long price;
+    }
+
+    @Data
+    @AllArgsConstructor
+    @NoArgsConstructor
     public static class Find {
         private String email;
     }

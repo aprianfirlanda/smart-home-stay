@@ -78,4 +78,21 @@ public class OrderServiceImpl implements OrderService {
             throw new NotFoundError("Order not found");
         }
     }
+
+    @Override
+    public void setBill(Long id, List<OrderDto.SetBill> requests) throws NotFoundError {
+        Optional<Order> orderOptional = orderRepository.findById(id);
+        if (orderOptional.isPresent()) {
+            Order order = orderOptional.get();
+            Long bill = 0L;
+            for (OrderDto.SetBill data : requests) {
+                bill += data.getPrice();
+            }
+            order.setBill(bill);
+
+            orderRepository.save(order);
+        } else {
+            throw new NotFoundError("Order not found");
+        }
+    }
 }

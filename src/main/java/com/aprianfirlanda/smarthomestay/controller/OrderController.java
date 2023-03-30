@@ -52,6 +52,20 @@ public class OrderController {
         return ResponseEntity.ok(response);
     }
 
+    @PutMapping("/{orderId}/set-bill")
+    public ResponseEntity<ResponseDto.Base> setBill(
+            @PathVariable Long orderId,
+            @RequestBody List<OrderDto.SetBill> requests
+    ) throws NotFoundError {
+        orderService.setBill(orderId, requests);
+
+        ResponseDto.Base response = new ResponseDto.Base();
+        response.setStatus("Success");
+        response.setMessage("Successfully set bill");
+
+        return ResponseEntity.ok(response);
+    }
+
     @GetMapping("/by-email")
     public ResponseEntity<ResponseDto.WithData<List<Order>>> findFacilitiesByType(@RequestBody OrderDto.Find request) {
         ResponseDto.WithData<List<Order>> response = new ResponseDto.WithData<>();
