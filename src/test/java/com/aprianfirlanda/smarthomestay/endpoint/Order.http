@@ -5,3 +5,16 @@ Content-Type: application/json
 {
   "email": "aprianfirlanda@gmail.com"
 }
+
+### Get List Room Facilities
+POST http://localhost:8080/api/orders
+Content-Type: application/json
+
+{
+  "email": "aprianfirlanda@gmail.com",
+  "facilityIds": [
+    2,
+    5,
+    6
+  ]
+}
