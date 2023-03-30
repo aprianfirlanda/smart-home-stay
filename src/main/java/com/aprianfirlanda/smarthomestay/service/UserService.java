@@ -1,10 +1,8 @@
 package com.aprianfirlanda.smarthomestay.service;
 
 import com.aprianfirlanda.smarthomestay.dto.UserDto;
-import com.aprianfirlanda.smarthomestay.entity.User;
+import com.aprianfirlanda.smarthomestay.error.clienterror.BadRequestError;
 
 public interface UserService {
-    void saveUser(UserDto userDto);
-
-    User findUserByEmail(String email);
+    void saveUser(UserDto.CreateReq userDto) throws BadRequestError;
 }
